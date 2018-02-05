@@ -1,11 +1,16 @@
 class MP3Importer
+<<<<<<< HEAD
   attr_accessor :import, :path, :files
+=======
+  attr_accessor :import, :files
+>>>>>>> 43209efd52f23da2b14222bd25674a313c22bbdc
   
   def initialize(path)
     @path = path
   end
   
   def files
+<<<<<<< HEAD
     @files = Dir.entries(@path)
     @files.delete(".")
     @files.delete("..")
@@ -25,6 +30,12 @@ class MP3Importer
         #new_music = Artist.new(i[0])
         #new_music.add_song(i[1])
       #end
+=======
+  end
+  
+  def import(name)
+    song = Song.new_by_filename(name)
+>>>>>>> 43209efd52f23da2b14222bd25674a313c22bbdc
   end
 
 
